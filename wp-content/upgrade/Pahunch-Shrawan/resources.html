@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/png"
+    />
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+    <link href="./assets/css/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/slick.css" />
+
+    <link rel="stylesheet" href="./assets/css/app.css" />
+
+    <title>Consortium Nepal</title>
+  </head>
+
+  <body>
+    <div id="app" class="app">
+      <div class="app-wrapper">
+        <header id="header" class="header sticky-top">
+          <nav
+            class="navbar bg-white navbar-light navbar-expand-xl header-main"
+          >
+            <div class="container">
+              <a class="navbar-brand" href="#"
+                ><img src="./assets/img/logo.png" alt="Consortium Nepal Logo"
+              /></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel"
+              >
+                <div class="offcanvas-header">
+                  <a class="navbar-brand" href="#"
+                    ><img
+                      src="./assets/img/logo.png"
+                      alt="Consortium Nepal Logo"
+                  /></a>
+                  <button
+                    type="button"
+                    class="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul
+                    class="navbar-nav navbar-nav--menu justify-content-center align-self-center flex-grow-1"
+                  >
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <img src="./assets/img/home.svg" alt="" />
+                        Home</a
+                      >
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <img src="./assets/img/Info.svg" alt="" />
+                        About Us</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <img src="./assets/img/book.svg" alt="" />
+                        Learning Content</a
+                      >
+                    </li>
+
+                    <li class="nav-item dropdown active">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img src="./assets/img/video.svg" alt="" />
+                        Resources
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <img src="./assets/img/HandHeart.svg" alt="" />
+                        Services</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">
+                        <img src="./assets/img/FilePdf.svg" alt="" />
+                        Contact us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <form action="" class="search-box">
+                <label id="js-search-box" for="search">
+                  <svg
+                    class="search-box__icon"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.4332 18.4137L14.9347 13.9161C16.2385 12.3508 16.8887 10.343 16.7499 8.31052C16.6112 6.27802 15.6941 4.37727 14.1896 3.00366C12.6852 1.63005 10.709 0.889352 8.67231 0.93564C6.63561 0.981927 4.69516 1.81164 3.25462 3.25218C1.81408 4.69271 0.984368 6.63317 0.938081 8.66987C0.891794 10.7066 1.6325 12.6827 3.0061 14.1872C4.37971 15.6917 6.28046 16.6087 8.31296 16.7475C10.3455 16.8862 12.3532 16.2361 13.9186 14.9322L18.4161 19.4307C18.4829 19.4975 18.5622 19.5505 18.6494 19.5866C18.7367 19.6228 18.8302 19.6414 18.9246 19.6414C19.0191 19.6414 19.1126 19.6228 19.1999 19.5866C19.2871 19.5505 19.3664 19.4975 19.4332 19.4307C19.4999 19.3639 19.5529 19.2847 19.5891 19.1974C19.6252 19.1102 19.6438 19.0166 19.6438 18.9222C19.6438 18.8278 19.6252 18.7342 19.5891 18.647C19.5529 18.5597 19.4999 18.4805 19.4332 18.4137ZM2.39339 8.8597C2.39339 7.5803 2.77278 6.32964 3.48357 5.26586C4.19437 4.20208 5.20465 3.37296 6.38666 2.88336C7.56867 2.39375 8.86932 2.26565 10.1241 2.51525C11.3789 2.76485 12.5316 3.38093 13.4362 4.2856C14.3409 5.19028 14.957 6.3429 15.2066 7.59771C15.4562 8.85253 15.3281 10.1532 14.8385 11.3352C14.3489 12.5172 13.5198 13.5275 12.456 14.2383C11.3922 14.9491 10.1415 15.3285 8.86214 15.3285C7.14711 15.3266 5.50286 14.6444 4.29015 13.4317C3.07743 12.219 2.3953 10.5747 2.39339 8.8597Z"
+                      fill="white"
+                      style="fill: var(--front)"
+                    />
+                  </svg>
+                </label>
+                <input
+                  type="search"
+                  class="search-box__searchInput"
+                  placeholder="Search here..."
+                  id="search"
+                />
+              </form>
+            </div>
+          </nav>
+        </header>
+        <!--hero starts -->
+        <section class="section section--hero" data-background>
+          <img src="./assets/img/hero-bg.jpg" class="hero-bg" alt="" />
+          <div class="container">
+            <div class="hero-content text-lg-center">
+              <h1
+                class="hero-title h1 darkblue"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                Unbreakable Threads Navigating Life's <br />
+                Challenges with Grace
+              </h1>
+              <p
+                class="lead mt-3"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+              >
+                Memoir of triumph over adversity, but a call to action for a
+                more inclusive <br />
+                society. It challenges preconceived notions, celebrates
+                diversity.
+              </p>
+              <div
+                class="d-flex justify-content-center hero-cta"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+                data-aos-offset="0"
+              >
+                <a href="#" role="button" class="btn btn-primary"
+                  >Watch Now
+                  <img src="./assets/img/PlayCircle.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--hero ends -->
+
+        <section class="section section--popularResources">
+          <div
+            class="container"
+            data-aos="fade-up"
+            data-aos-easing="ease-in-sine"
+            data-aos-delay="200"
+            data-aos-offset="0"
+            data-aos-duration="500"
+          >
+            <header class="section-header">
+              <h2
+                class="section-title h2 darkblue"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                Popular Resources
+              </h2>
+              <div
+                class="d-flex justify-content-between gap-3 w-100"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+              >
+                <p class="darkblue">Click on the card to view the resources</p>
+              </div>
+            </header>
+
+            <div
+              class="resource-grid"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-sine"
+              data-aos-delay="200"
+              data-aos-offset="0"
+              data-aos-duration="1000"
+            >
+              <div class="resource-carousel-item">
+                <div class="card3 card">
+                  <span class="badge">Audio</span>
+                  <div class="card-body">
+                    <img
+                      src="./assets/img/card-img.jpg"
+                      class="card-img"
+                      alt=""
+                    />
+                    <a href="#" class="stretched-link">
+                      <h5 class="card-title h5">Disability Visibility</h5>
+                    </a>
+                    <div class="card-text">
+                      <p>
+                        Book by Alice Wong is an essential anthology from blog
+                        posts, manifestos, and eulogies to Congressional
+                        testimonies, and more providing a gli...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="resource-carousel-item">
+                <div class="card3 card">
+                  <span class="badge">Audio</span>
+                  <div class="card-body">
+                    <img
+                      src="./assets/img/card-img.jpg"
+                      class="card-img"
+                      alt=""
+                    />
+                    <a href="#" class="stretched-link">
+                      <h5 class="card-title h5">Disability Visibility</h5>
+                    </a>
+                    <div class="card-text">
+                      <p>
+                        Book by Alice Wong is an essential anthology from blog
+                        posts, manifestos, and eulogies to Congressional
+                        testimonies, and more providing a gli...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="resource-carousel-item">
+                <div class="card3 card">
+                  <span class="badge">Audio</span>
+                  <div class="card-body">
+                    <img
+                      src="./assets/img/card-img.jpg"
+                      class="card-img"
+                      alt=""
+                    />
+                    <a href="#" class="stretched-link">
+                      <h5 class="card-title h5">Disability Visibility</h5>
+                    </a>
+                    <div class="card-text">
+                      <p>
+                        Book by Alice Wong is an essential anthology from blog
+                        posts, manifestos, and eulogies to Congressional
+                        testimonies, and more providing a gli...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="resource-carousel-item">
+                <div class="card3 card">
+                  <span class="badge">Audio</span>
+                  <div class="card-body">
+                    <img
+                      src="./assets/img/card-img.jpg"
+                      class="card-img"
+                      alt=""
+                    />
+                    <a href="#" class="stretched-link">
+                      <h5 class="card-title h5">Disability Visibility</h5>
+                    </a>
+                    <div class="card-text">
+                      <p>
+                        Book by Alice Wong is an essential anthology from blog
+                        posts, manifestos, and eulogies to Congressional
+                        testimonies, and more providing a gli...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex mt-4 justify-content-center">
+              <a href="#" class="btn btn-outline-primary">View All </a>
+            </div>
+          </div>
+        </section>
+        <section
+          class="section section--highlightedArticle"
+          data-background
+          style="background-image: url(./assets/img/highlited-article-img.jpg)"
+        >
+          <div class="container">
+            <div class="d-flex justify-content-lg-end">
+              <article
+                class="card article"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <div class="card-body">
+                  <span class="article__category">HEALTH</span>
+                  <h3 class="h3 article__title">
+                    Unveiling the Hidden Strengths of Disability
+                  </h3>
+                  <ul class="article__meta">
+                    <li class="article__meta__item">Sita Nakarmi</li>
+                    <li class="article__meta__item">
+                      May 7, 2019 (10 mins read)
+                    </li>
+                  </ul>
+                  <div class="card-text article__text">
+                    This blog delves into the often overlooked aspects of
+                    disability, shedding light on the remarkable strengths and
+                    resilience that individuals with disabilities possess.
+                    Through inspiring stories, practical advice, and
+                    thought-provoking insights, we aim to challenge
+                    preconceptions and promote a more inclusive and empathetic
+                    society.
+                  </div>
+                  <a
+                    href="#"
+                    role="button"
+                    class="btn btn-primary d-none d-lg-inline-flex"
+                    >Watch Now
+                    <img src="./assets/img/PlayCircle.svg" alt="" />
+                  </a>
+                  <a
+                    href="#"
+                    role="button"
+                    class="text-link d-inline-flex d-lg-none"
+                    >Watch Now
+                    <img src="./assets/img/PlayCircle-dark.svg" alt="" />
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--articleCategories">
+          <div
+            class="container"
+            data-aos="fade-up"
+            data-aos-easing="ease-in-sine"
+            data-aos-delay="200"
+            data-aos-offset="0"
+            data-aos-duration="500"
+          >
+            <header class="section-header">
+              <div
+                class="d-flex flex-column align-items-md-end flex-md-row justify-content-md-between gap-3 w-100"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+              >
+                <div>
+                  <h2 class="section-title h2 darkblue">Resources Category</h2>
+                  <p class="darkblue">Filter the resources by category.</p>
+                </div>
+                <div class="dropdown category-dropdown d-block d-lg-none">
+                  <button
+                    class="btn btn-category dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img src="./assets/img/SquaresFour.svg" alt="" />
+                    Category
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <button class="dropdown-item" type="button">
+                        Mental Health
+                      </button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" type="button">
+                        Sexual Reproduction Health and Rights
+                      </button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" type="button">
+                        Education
+                      </button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" type="button">
+                        Sports
+                      </button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" type="button">
+                        Disability Friendly
+                      </button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" type="button">
+                        Empowerment
+                      </button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" type="button">
+                        Empowerment
+                      </button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" type="button">
+                        Empowerment
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </header>
+            <div class="row">
+              <div class="col-lg-3 d-none d-lg-block">
+                <aside class="category-menu-card">
+                  <h3 class="h3 category-menu-title">Category</h3>
+                  <div class="category-menu-block">
+                    <ul class="category-menu">
+                      <li class="category-menu-item">
+                        <a href="#" class="category-menu-link">Mental Health</a>
+                      </li>
+                      <li class="category-menu-item">
+                        <a href="#" class="category-menu-link"
+                          >Sexual and Reproductive Health and Rights</a
+                        >
+                      </li>
+                      <li class="category-menu-item">
+                        <a href="#" class="category-menu-link"
+                          >Sexual and Reproductive Contraception</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </aside>
+              </div>
+              <div class="col-12 col-lg-9">
+                <div
+                  class="articles-stack-vertical"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <article class="card article article--horizontal">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <img
+                          src="./assets/img/card-img.jpg"
+                          class="card-img card-img--square"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-lg-8">
+                        <div class="card-body">
+                          <span class="article__category">HEALTH</span>
+                          <a href="#" class="stretched-link">
+                            <h3 class="h3 article__title">
+                              Empowering Abilities: Stories of Triumph and
+                              Resilience
+                            </h3>
+                          </a>
+                          <ul class="article__meta">
+                            <li class="article__meta__item">Sita Nakarmi</li>
+                            <li class="article__meta__item">
+                              May 7, 2019 (10 mins read)
+                            </li>
+                          </ul>
+                          <div class="card-text article__text">
+                            Ea qui dolor aute cupidatat ad pariatur proident.
+                            Mollit nulla tempor aute reprehenderit ut dolore
+                            mollit nisi consequat excepteur ex officia pariatur
+                            irure.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="card article article--horizontal">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <img
+                          src="./assets/img/card-img.jpg"
+                          class="card-img card-img--square"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-lg-8">
+                        <div class="card-body">
+                          <span class="article__category">HEALTH</span>
+                          <a href="#" class="stretched-link">
+                            <h3 class="h3 article__title">
+                              Empowering Abilities: Stories of Triumph and
+                              Resilience
+                            </h3>
+                          </a>
+                          <ul class="article__meta">
+                            <li class="article__meta__item">Sita Nakarmi</li>
+                            <li class="article__meta__item">
+                              May 7, 2019 (10 mins read)
+                            </li>
+                          </ul>
+                          <div class="card-text article__text">
+                            Ea qui dolor aute cupidatat ad pariatur proident.
+                            Mollit nulla tempor aute reprehenderit ut dolore
+                            mollit nisi consequat excepteur ex officia pariatur
+                            irure.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <nav aria-label="Page navigation  d-none d-md-flex ">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="First">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.6585 15L15.8335 13.825L12.0168 10L15.8335 6.175L14.6585 5L9.6585 10L14.6585 15Z"
+                            fill="#333333"
+                          />
+                          <path
+                            d="M9.1668 15L10.3418 13.825L6.52513 10L10.3418 6.175L9.1668 5L4.1668 10L9.1668 15Z"
+                            fill="#333333"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.575 15L13.75 13.825L9.93333 10L13.75 6.175L12.575 5L7.575 10L12.575 15Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#"
+                        ><svg
+                          width="12"
+                          height="4"
+                          viewBox="0 0 12 4"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0.0632324 2.01611C0.0632324 1.58236 0.174316 1.2782 0.396484 1.10364C0.623942 0.923787 0.899007 0.833862 1.22168 0.833862C1.54435 0.833862 1.81942 0.923787 2.04688 1.10364C2.27962 1.2782 2.396 1.58236 2.396 2.01611C2.396 2.43929 2.27962 2.74609 2.04688 2.93652C1.81942 3.12166 1.54435 3.21423 1.22168 3.21423C0.899007 3.21423 0.623942 3.12166 0.396484 2.93652C0.174316 2.74609 0.0632324 2.43929 0.0632324 2.01611ZM4.52246 2.01611C4.52246 1.58236 4.63354 1.2782 4.85571 1.10364C5.08317 0.923787 5.35824 0.833862 5.68091 0.833862C6.00358 0.833862 6.27865 0.923787 6.5061 1.10364C6.73885 1.2782 6.85522 1.58236 6.85522 2.01611C6.85522 2.43929 6.73885 2.74609 6.5061 2.93652C6.27865 3.12166 6.00358 3.21423 5.68091 3.21423C5.35824 3.21423 5.08317 3.12166 4.85571 2.93652C4.63354 2.74609 4.52246 2.43929 4.52246 2.01611ZM8.98169 2.01611C8.98169 1.58236 9.09277 1.2782 9.31494 1.10364C9.5424 0.923787 9.81746 0.833862 10.1401 0.833862C10.4628 0.833862 10.7379 0.923787 10.9653 1.10364C11.1981 1.2782 11.3145 1.58236 11.3145 2.01611C11.3145 2.43929 11.1981 2.74609 10.9653 2.93652C10.7379 3.12166 10.4628 3.21423 10.1401 3.21423C9.81746 3.21423 9.5424 3.12166 9.31494 2.93652C9.09277 2.74609 8.98169 2.43929 8.98169 2.01611Z"
+                            fill="#333333"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">10</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.675 5L7.5 6.175L11.3167 10L7.5 13.825L8.675 15L13.675 10L8.675 5Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Last">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.34175 5L4.16675 6.175L7.98341 10L4.16675 13.825L5.34175 15L10.3417 10L5.34175 5Z"
+                            fill="black"
+                          />
+                          <path
+                            d="M10.8333 5L9.65833 6.175L13.475 10L9.65833 13.825L10.8333 15L15.8333 10L10.8333 5Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <div
+                  class="d-flex d-md-none mt-4 justify-content-center hero-cta aos-init aos-animate"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                  data-aos-offset="0"
+                >
+                  <a href="#" role="button" class="btn btn-primary"
+                    >Load More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer id="footer" class="footer app-footer">
+        <div class="footer-wrapper d-none d-lg-block">
+          <div class="footer-main">
+            <div class="container">
+              <div class="row justify-content-lg-between">
+                <div class="col-12 col-xs-6 col-lg-6 mt-3 mt-lg-0">
+                  <aside class="widget widget-info">
+                    <img
+                      width="160"
+                      src="./assets/img/logo.png"
+                      class="img-fluid footer-logo"
+                      alt=" "
+                    />
+                    <p>
+                      Empowering through knowledge, our disability information
+                      platform bridges understanding and support.
+                    </p>
+                    <ul class="social-links">
+                      <li>
+                        <a
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-bs-title="Facebook"
+                          ><svg
+                            width="34"
+                            height="35"
+                            viewBox="0 0 34 35"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M17 4.15527C14.2682 4.15527 11.5976 4.96536 9.32619 6.4831C7.05474 8.00084 5.28436 10.1581 4.23892 12.682C3.19348 15.2059 2.91995 17.9831 3.45291 20.6625C3.98587 23.3418 5.30138 25.803 7.23309 27.7347C9.16481 29.6664 11.626 30.9819 14.3053 31.5149C16.9847 32.0478 19.7619 31.7743 22.2858 30.7289C24.8097 29.6834 26.9669 27.913 28.4847 25.6416C30.0024 23.3701 30.8125 20.6996 30.8125 17.9678C30.8086 14.3057 29.3522 10.7946 26.7626 8.20513C24.1731 5.61562 20.6621 4.15914 17 4.15527ZM18.0625 29.6061V21.1553H21.25C21.5318 21.1553 21.802 21.0433 22.0013 20.8441C22.2006 20.6448 22.3125 20.3746 22.3125 20.0928C22.3125 19.811 22.2006 19.5407 22.0013 19.3415C21.802 19.1422 21.5318 19.0303 21.25 19.0303H18.0625V15.8428C18.0625 15.2792 18.2864 14.7387 18.6849 14.3402C19.0834 13.9417 19.6239 13.7178 20.1875 13.7178H22.3125C22.5943 13.7178 22.8645 13.6058 23.0638 13.4066C23.2631 13.2073 23.375 12.9371 23.375 12.6553C23.375 12.3735 23.2631 12.1032 23.0638 11.904C22.8645 11.7047 22.5943 11.5928 22.3125 11.5928H20.1875C19.0603 11.5928 17.9793 12.0405 17.1823 12.8376C16.3853 13.6346 15.9375 14.7156 15.9375 15.8428V19.0303H12.75C12.4682 19.0303 12.198 19.1422 11.9987 19.3415C11.7994 19.5407 11.6875 19.811 11.6875 20.0928C11.6875 20.3746 11.7994 20.6448 11.9987 20.8441C12.198 21.0433 12.4682 21.1553 12.75 21.1553H15.9375V29.6061C12.9423 29.3327 10.1678 27.9151 8.19113 25.6483C6.21445 23.3814 5.18776 20.4398 5.32461 17.4352C5.46146 14.4307 6.75133 11.5946 8.9259 9.51679C11.1005 7.43901 13.9924 6.27953 17 6.27953C20.0077 6.27953 22.8995 7.43901 25.0741 9.51679C27.2487 11.5946 28.5385 14.4307 28.6754 17.4352C28.8123 20.4398 27.7856 23.3814 25.8089 25.6483C23.8322 27.9151 21.0577 29.3327 18.0625 29.6061Z"
+                              fill="#444444"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-bs-title="Twitter"
+                        >
+                          <svg
+                            width="34"
+                            height="35"
+                            viewBox="0 0 34 35"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M32.8564 10.1239C32.776 9.92975 32.6399 9.76379 32.4652 9.647C32.2905 9.53022 32.0851 9.46786 31.8749 9.46782H27.8335C27.2684 8.5065 26.4642 7.70773 25.4991 7.14919C24.534 6.59064 23.4408 6.29132 22.3257 6.28032C21.495 6.26942 20.6705 6.42479 19.9007 6.73726C19.1309 7.04974 18.4314 7.51302 17.8433 8.09985C17.238 8.69382 16.7576 9.40281 16.4303 10.1851C16.103 10.9674 15.9355 11.8073 15.9374 12.6553V13.4641C10.5904 12.0537 6.21689 7.70407 6.17041 7.65759C6.02786 7.51378 5.84719 7.4137 5.64967 7.36913C5.45215 7.32456 5.24601 7.33736 5.05552 7.40602C4.86503 7.47468 4.69813 7.59634 4.57447 7.75667C4.45081 7.91701 4.37553 8.10934 4.35752 8.31102C3.78509 14.6581 5.62853 18.9055 7.27939 21.3506C8.08434 22.5593 9.06357 23.6423 10.1853 24.5646C8.16259 26.8928 4.97775 28.116 4.94322 28.1293C4.79329 28.1855 4.65799 28.2748 4.54743 28.3906C4.43687 28.5064 4.35391 28.6456 4.30474 28.798C4.25557 28.9503 4.24147 29.1119 4.26348 29.2704C4.2855 29.429 4.34307 29.5806 4.43189 29.7138C4.5315 29.8625 4.92994 30.3845 5.90345 30.8719C7.10674 31.4749 8.6965 31.7803 10.6249 31.7803C20.0108 31.7803 27.8534 24.5527 28.6542 15.2531L32.6267 11.282C32.7752 11.1334 32.8763 10.944 32.9172 10.7378C32.9581 10.5317 32.937 10.318 32.8564 10.1239ZM26.8799 14.0299C26.6977 14.2125 26.5882 14.4552 26.5717 14.7126C26.0312 23.0917 19.0293 29.6553 10.6249 29.6553C9.22244 29.6553 8.23431 29.4694 7.54103 29.2463C9.0697 28.4162 11.2013 26.9884 12.572 24.9325C12.6524 24.8116 12.7072 24.6755 12.733 24.5326C12.7588 24.3897 12.755 24.243 12.7219 24.1017C12.6888 23.9603 12.6271 23.8272 12.5405 23.7106C12.454 23.594 12.3444 23.4964 12.2187 23.4238C12.1563 23.3879 6.38689 19.9255 6.37494 10.6738C8.49994 12.4003 12.3847 15.0791 16.8233 15.8256C16.9754 15.8512 17.1313 15.8434 17.2801 15.8027C17.4289 15.7621 17.5671 15.6895 17.685 15.59C17.8029 15.4905 17.8978 15.3666 17.9629 15.2268C18.0281 15.0869 18.0621 14.9346 18.0624 14.7803V12.6553C18.0612 12.0885 18.1734 11.5273 18.3924 11.0045C18.6114 10.4817 18.9327 10.008 19.3374 9.61126C19.7255 9.22251 20.1875 8.9155 20.6962 8.70837C21.2049 8.50124 21.7499 8.39819 22.2992 8.40532C23.9806 8.42657 25.5517 9.45188 26.2092 10.9566C26.292 11.1458 26.4283 11.3068 26.6012 11.4198C26.774 11.5327 26.9761 11.5929 27.1827 11.5928H29.3077L26.8799 14.0299Z"
+                              fill="#444444"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          data-bs-toggle="tooltip"
+                          data-bs-title="Instagram"
+                          ><svg
+                            width="34"
+                            height="35"
+                            viewBox="0 0 34 35"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M17 11.5928C15.7391 11.5928 14.5066 11.9667 13.4582 12.6672C12.4099 13.3676 11.5928 14.3633 11.1103 15.5282C10.6278 16.693 10.5015 17.9748 10.7475 19.2115C10.9935 20.4481 11.6006 21.584 12.4922 22.4756C13.3838 23.3671 14.5197 23.9743 15.7563 24.2203C16.9929 24.4663 18.2747 24.34 19.4396 23.8575C20.6045 23.375 21.6001 22.5579 22.3006 21.5095C23.0011 20.4612 23.375 19.2286 23.375 17.9678C23.3732 16.2776 22.701 14.6571 21.5059 13.4619C20.3107 12.2667 18.6902 11.5945 17 11.5928ZM17 22.2178C16.1594 22.2178 15.3377 21.9685 14.6388 21.5015C13.9399 21.0345 13.3952 20.3708 13.0735 19.5942C12.7518 18.8176 12.6677 17.9631 12.8317 17.1386C12.9956 16.3142 13.4004 15.5569 13.9948 14.9626C14.5892 14.3682 15.3464 13.9634 16.1709 13.7994C16.9953 13.6354 17.8498 13.7196 18.6264 14.0413C19.403 14.363 20.0667 14.9077 20.5337 15.6066C21.0007 16.3055 21.25 17.1272 21.25 17.9678C21.25 19.0949 20.8022 20.1759 20.0052 20.973C19.2082 21.77 18.1272 22.2178 17 22.2178ZM23.375 4.15527H10.625C8.6531 4.15738 6.76257 4.94165 5.36822 6.336C3.97388 7.73034 3.18961 9.62087 3.1875 11.5928V24.3428C3.18961 26.3147 3.97388 28.2052 5.36822 29.5996C6.76257 30.9939 8.6531 31.7782 10.625 31.7803H23.375C25.3469 31.7782 27.2374 30.9939 28.6318 29.5996C30.0261 28.2052 30.8104 26.3147 30.8125 24.3428V11.5928C30.8104 9.62087 30.0261 7.73034 28.6318 6.336C27.2374 4.94165 25.3469 4.15738 23.375 4.15527ZM28.6875 24.3428C28.6875 25.7517 28.1278 27.103 27.1315 28.0993C26.1352 29.0956 24.784 29.6553 23.375 29.6553H10.625C9.21604 29.6553 7.86478 29.0956 6.8685 28.0993C5.87221 27.103 5.3125 25.7517 5.3125 24.3428V11.5928C5.3125 10.1838 5.87221 8.83256 6.8685 7.83627C7.86478 6.83998 9.21604 6.28027 10.625 6.28027H23.375C24.784 6.28027 26.1352 6.83998 27.1315 7.83627C28.1278 8.83256 28.6875 10.1838 28.6875 11.5928V24.3428ZM25.5 11.0615C25.5 11.3767 25.4065 11.6849 25.2314 11.947C25.0563 12.2091 24.8074 12.4133 24.5162 12.534C24.2249 12.6546 23.9045 12.6861 23.5953 12.6247C23.2862 12.5632 23.0022 12.4114 22.7793 12.1885C22.5564 11.9656 22.4046 11.6816 22.3431 11.3724C22.2816 11.0633 22.3132 10.7428 22.4338 10.4516C22.5544 10.1604 22.7587 9.91149 23.0208 9.73637C23.2829 9.56124 23.591 9.46777 23.9062 9.46777C24.3289 9.46777 24.7343 9.63569 25.0332 9.93457C25.3321 10.2335 25.5 10.6388 25.5 11.0615Z"
+                              fill="#444444"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </aside>
+                </div>
+                <div class="col-12 col-xs-6 col-lg-2 mt-3 mt-lg-0">
+                  <aside class="widget">
+                    <h4 class="h3 mb-3">Navigations</h4>
+                    <ul class="menu">
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">About us</a>
+                      </li>
+                      <li>
+                        <a href="#">Learning Content</a>
+                      </li>
+                      <li>
+                        <a href="#">Resources</a>
+                      </li>
+                      <li>
+                        <a href="#">Services</a>
+                      </li>
+                      <li>
+                        <a href="#">Contact us</a>
+                      </li>
+                    </ul>
+                  </aside>
+                </div>
+                <div class="col-12 col-xs-6 col-lg-auto mt-3 mt-lg-0">
+                  <aside class="widget widget-contact">
+                    <h4 class="h3 mb-3">Contact Information</h4>
+                    <ul class="menu">
+                      <li>
+                        <a href="#">
+                          <img src="./assets/img/House.svg" alt="" /> New
+                          Baneshwor, Kathmandu</a
+                        >
+                      </li>
+                      <li>
+                        <a href="tel:+977 9818202020">
+                          <img src="./assets/img/Phone.svg" alt="" /> +977
+                          9818202020</a
+                        >
+                      </li>
+                      <li>
+                        <a href="mailto:info@dip.com.np"
+                          ><img src="./assets/img/EnvelopeSimple.svg" alt="" />
+                          info@dip.com.np</a
+                        >
+                      </li>
+                    </ul>
+                  </aside>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div
+              class="container d-flex justify-content-center align-items-center flex-column flex-lg-row text-center"
+            >
+              <div class="copyright-text">
+                <p>
+                  Copyright © 2023 Disability Info Platform . All Right
+                  Reserved.
+                </p>
+                <p>Developed by Ikigai Tech</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-responsive d-block d-lg-none">
+          <div class="footer-responsive-top">
+            <ul class="social-links justify-content-center">
+              <li>
+                <a href="#" data-bs-toggle="tooltip" data-bs-title="Facebook"
+                  ><svg
+                    width="34"
+                    height="35"
+                    viewBox="0 0 34 35"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 4.15527C14.2682 4.15527 11.5976 4.96536 9.32619 6.4831C7.05474 8.00084 5.28436 10.1581 4.23892 12.682C3.19348 15.2059 2.91995 17.9831 3.45291 20.6625C3.98587 23.3418 5.30138 25.803 7.23309 27.7347C9.16481 29.6664 11.626 30.9819 14.3053 31.5149C16.9847 32.0478 19.7619 31.7743 22.2858 30.7289C24.8097 29.6834 26.9669 27.913 28.4847 25.6416C30.0024 23.3701 30.8125 20.6996 30.8125 17.9678C30.8086 14.3057 29.3522 10.7946 26.7626 8.20513C24.1731 5.61562 20.6621 4.15914 17 4.15527ZM18.0625 29.6061V21.1553H21.25C21.5318 21.1553 21.802 21.0433 22.0013 20.8441C22.2006 20.6448 22.3125 20.3746 22.3125 20.0928C22.3125 19.811 22.2006 19.5407 22.0013 19.3415C21.802 19.1422 21.5318 19.0303 21.25 19.0303H18.0625V15.8428C18.0625 15.2792 18.2864 14.7387 18.6849 14.3402C19.0834 13.9417 19.6239 13.7178 20.1875 13.7178H22.3125C22.5943 13.7178 22.8645 13.6058 23.0638 13.4066C23.2631 13.2073 23.375 12.9371 23.375 12.6553C23.375 12.3735 23.2631 12.1032 23.0638 11.904C22.8645 11.7047 22.5943 11.5928 22.3125 11.5928H20.1875C19.0603 11.5928 17.9793 12.0405 17.1823 12.8376C16.3853 13.6346 15.9375 14.7156 15.9375 15.8428V19.0303H12.75C12.4682 19.0303 12.198 19.1422 11.9987 19.3415C11.7994 19.5407 11.6875 19.811 11.6875 20.0928C11.6875 20.3746 11.7994 20.6448 11.9987 20.8441C12.198 21.0433 12.4682 21.1553 12.75 21.1553H15.9375V29.6061C12.9423 29.3327 10.1678 27.9151 8.19113 25.6483C6.21445 23.3814 5.18776 20.4398 5.32461 17.4352C5.46146 14.4307 6.75133 11.5946 8.9259 9.51679C11.1005 7.43901 13.9924 6.27953 17 6.27953C20.0077 6.27953 22.8995 7.43901 25.0741 9.51679C27.2487 11.5946 28.5385 14.4307 28.6754 17.4352C28.8123 20.4398 27.7856 23.3814 25.8089 25.6483C23.8322 27.9151 21.0577 29.3327 18.0625 29.6061Z"
+                      fill="#444444"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-bs-toggle="tooltip" data-bs-title="Twitter">
+                  <svg
+                    width="34"
+                    height="35"
+                    viewBox="0 0 34 35"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M32.8564 10.1239C32.776 9.92975 32.6399 9.76379 32.4652 9.647C32.2905 9.53022 32.0851 9.46786 31.8749 9.46782H27.8335C27.2684 8.5065 26.4642 7.70773 25.4991 7.14919C24.534 6.59064 23.4408 6.29132 22.3257 6.28032C21.495 6.26942 20.6705 6.42479 19.9007 6.73726C19.1309 7.04974 18.4314 7.51302 17.8433 8.09985C17.238 8.69382 16.7576 9.40281 16.4303 10.1851C16.103 10.9674 15.9355 11.8073 15.9374 12.6553V13.4641C10.5904 12.0537 6.21689 7.70407 6.17041 7.65759C6.02786 7.51378 5.84719 7.4137 5.64967 7.36913C5.45215 7.32456 5.24601 7.33736 5.05552 7.40602C4.86503 7.47468 4.69813 7.59634 4.57447 7.75667C4.45081 7.91701 4.37553 8.10934 4.35752 8.31102C3.78509 14.6581 5.62853 18.9055 7.27939 21.3506C8.08434 22.5593 9.06357 23.6423 10.1853 24.5646C8.16259 26.8928 4.97775 28.116 4.94322 28.1293C4.79329 28.1855 4.65799 28.2748 4.54743 28.3906C4.43687 28.5064 4.35391 28.6456 4.30474 28.798C4.25557 28.9503 4.24147 29.1119 4.26348 29.2704C4.2855 29.429 4.34307 29.5806 4.43189 29.7138C4.5315 29.8625 4.92994 30.3845 5.90345 30.8719C7.10674 31.4749 8.6965 31.7803 10.6249 31.7803C20.0108 31.7803 27.8534 24.5527 28.6542 15.2531L32.6267 11.282C32.7752 11.1334 32.8763 10.944 32.9172 10.7378C32.9581 10.5317 32.937 10.318 32.8564 10.1239ZM26.8799 14.0299C26.6977 14.2125 26.5882 14.4552 26.5717 14.7126C26.0312 23.0917 19.0293 29.6553 10.6249 29.6553C9.22244 29.6553 8.23431 29.4694 7.54103 29.2463C9.0697 28.4162 11.2013 26.9884 12.572 24.9325C12.6524 24.8116 12.7072 24.6755 12.733 24.5326C12.7588 24.3897 12.755 24.243 12.7219 24.1017C12.6888 23.9603 12.6271 23.8272 12.5405 23.7106C12.454 23.594 12.3444 23.4964 12.2187 23.4238C12.1563 23.3879 6.38689 19.9255 6.37494 10.6738C8.49994 12.4003 12.3847 15.0791 16.8233 15.8256C16.9754 15.8512 17.1313 15.8434 17.2801 15.8027C17.4289 15.7621 17.5671 15.6895 17.685 15.59C17.8029 15.4905 17.8978 15.3666 17.9629 15.2268C18.0281 15.0869 18.0621 14.9346 18.0624 14.7803V12.6553C18.0612 12.0885 18.1734 11.5273 18.3924 11.0045C18.6114 10.4817 18.9327 10.008 19.3374 9.61126C19.7255 9.22251 20.1875 8.9155 20.6962 8.70837C21.2049 8.50124 21.7499 8.39819 22.2992 8.40532C23.9806 8.42657 25.5517 9.45188 26.2092 10.9566C26.292 11.1458 26.4283 11.3068 26.6012 11.4198C26.774 11.5327 26.9761 11.5929 27.1827 11.5928H29.3077L26.8799 14.0299Z"
+                      fill="#444444"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-bs-toggle="tooltip" data-bs-title="Instagram"
+                  ><svg
+                    width="34"
+                    height="35"
+                    viewBox="0 0 34 35"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 11.5928C15.7391 11.5928 14.5066 11.9667 13.4582 12.6672C12.4099 13.3676 11.5928 14.3633 11.1103 15.5282C10.6278 16.693 10.5015 17.9748 10.7475 19.2115C10.9935 20.4481 11.6006 21.584 12.4922 22.4756C13.3838 23.3671 14.5197 23.9743 15.7563 24.2203C16.9929 24.4663 18.2747 24.34 19.4396 23.8575C20.6045 23.375 21.6001 22.5579 22.3006 21.5095C23.0011 20.4612 23.375 19.2286 23.375 17.9678C23.3732 16.2776 22.701 14.6571 21.5059 13.4619C20.3107 12.2667 18.6902 11.5945 17 11.5928ZM17 22.2178C16.1594 22.2178 15.3377 21.9685 14.6388 21.5015C13.9399 21.0345 13.3952 20.3708 13.0735 19.5942C12.7518 18.8176 12.6677 17.9631 12.8317 17.1386C12.9956 16.3142 13.4004 15.5569 13.9948 14.9626C14.5892 14.3682 15.3464 13.9634 16.1709 13.7994C16.9953 13.6354 17.8498 13.7196 18.6264 14.0413C19.403 14.363 20.0667 14.9077 20.5337 15.6066C21.0007 16.3055 21.25 17.1272 21.25 17.9678C21.25 19.0949 20.8022 20.1759 20.0052 20.973C19.2082 21.77 18.1272 22.2178 17 22.2178ZM23.375 4.15527H10.625C8.6531 4.15738 6.76257 4.94165 5.36822 6.336C3.97388 7.73034 3.18961 9.62087 3.1875 11.5928V24.3428C3.18961 26.3147 3.97388 28.2052 5.36822 29.5996C6.76257 30.9939 8.6531 31.7782 10.625 31.7803H23.375C25.3469 31.7782 27.2374 30.9939 28.6318 29.5996C30.0261 28.2052 30.8104 26.3147 30.8125 24.3428V11.5928C30.8104 9.62087 30.0261 7.73034 28.6318 6.336C27.2374 4.94165 25.3469 4.15738 23.375 4.15527ZM28.6875 24.3428C28.6875 25.7517 28.1278 27.103 27.1315 28.0993C26.1352 29.0956 24.784 29.6553 23.375 29.6553H10.625C9.21604 29.6553 7.86478 29.0956 6.8685 28.0993C5.87221 27.103 5.3125 25.7517 5.3125 24.3428V11.5928C5.3125 10.1838 5.87221 8.83256 6.8685 7.83627C7.86478 6.83998 9.21604 6.28027 10.625 6.28027H23.375C24.784 6.28027 26.1352 6.83998 27.1315 7.83627C28.1278 8.83256 28.6875 10.1838 28.6875 11.5928V24.3428ZM25.5 11.0615C25.5 11.3767 25.4065 11.6849 25.2314 11.947C25.0563 12.2091 24.8074 12.4133 24.5162 12.534C24.2249 12.6546 23.9045 12.6861 23.5953 12.6247C23.2862 12.5632 23.0022 12.4114 22.7793 12.1885C22.5564 11.9656 22.4046 11.6816 22.3431 11.3724C22.2816 11.0633 22.3132 10.7428 22.4338 10.4516C22.5544 10.1604 22.7587 9.91149 23.0208 9.73637C23.2829 9.56124 23.591 9.46777 23.9062 9.46777C24.3289 9.46777 24.7343 9.63569 25.0332 9.93457C25.3321 10.2335 25.5 10.6388 25.5 11.0615Z"
+                      fill="#444444"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div>© copyright 2023. All Rights Reserved</div>
+          </div>
+          <div class="footer-responsive-bottom">
+            Developed by <a href="#">Ikigai Tech </a> 2023
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/jquery.waypoints.min.js"></script>
+    <script src="./assets/js/jquery.countup.min.js"></script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

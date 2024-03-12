@@ -1,0 +1,23 @@
+.card3 .img-block{
+    height: 280px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.card3 .img-block img.card-img{
+    /* height: 100%; */
+}
+
+.card1 .icon-illustration{
+    padding: 12px!important;
+}
+
+.section--popularResources .resource-grid{
+    display: flex;
+}
+
+.section--popularResources .resource-grid .resource-carousel-item{
+    display: flex;
+    height: auto;
+}
+
